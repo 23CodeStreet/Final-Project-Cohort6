@@ -8,7 +8,7 @@ $('input[name=searchName]').change(function(e) {
         for (var i = 0; i < data.results.length; i++) {
             // $('.resultContainer').append(createHTML(data.results[i]))
         }
-        console.log(data.results)
-        console.log('returning results')
+        console.log(data.results);
+        console.log('returning results');
     })
 })
