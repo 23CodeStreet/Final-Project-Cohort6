@@ -21,7 +21,34 @@
     <div class="container">
 
         <h1>Final Project</h1>
-        <input type="text" name="searchName" id="film-name" />
+
+        <div class="container-form">
+            <h2>Search by Genre</h2>
+            <form id="form-genres">
+                <input type="checkbox" class="checkbox-genre" name="genre" value="16">
+                <label class="text-synposis" for="16">Animation</label>
+                <input type="checkbox" class="checkbox-genre" name="genre" value="12">
+                <label class="text-synposis" for="12">Adventure</label>
+            </form>
+            <button onclick="getGenres()">Select Genres</button>
+        </div>
+
+        <div class="container-form">
+            <h2>Search by Name</h2>
+            <form id="form-search">
+                <fieldset id="select-type">
+                    <input type="radio" name="type" value="movie" id="movie" checked>
+                    <label for="movie">Movie</label>
+                    <input type="radio" name="type" value="person" id="person">
+                    <label for="person">Person</label>
+                    <input type="radio" name="type" value="tv" id="tv">
+                    <label for="tv">TV</label>
+                </fieldset>
+
+                <input type="text" name="searchName" id="film-name" />
+            </form>
+            <button onclick="startSearch()">Search</button>
+        </div>
 
     </div>
     <!-- "container" -->
