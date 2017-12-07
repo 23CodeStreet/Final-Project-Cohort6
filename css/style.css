@@ -1,35 +1,113 @@
 * {
- box-sizing: border-box;
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 /*  General Text Styling  */
 
 body {
-  font-family: sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
+
+/*  Header Styling */
+
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+    font-family: 'Yeseva One', serif;
+    font-weight: bold;
 }
+
+h1, h2 {
+    text-align: center;
+}
+
 h1 {
   font-size: 2em;
   color: red;
   padding: 5em;
   text-align: center;
+  font-size: 2em;
+  color: red;
+  margin: 2em 0 1em;
+
 }
+
 h2 {
-  font-size: 1.7em;
+    font-size: 1.7em;
+    margin: 1em 0;
 }
+
 h3 {
-  font-size: 1.4em;
+    font-size: 1.4em;
 }
+
 h4 {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
+
 h5 {
-  font-size: 1em;
+    font-size: 1em;
 }
+
 h6 {
-  font-size: 0.8em;
+    font-size: 0.8em;
+}
+
+/*  Paragraphs, Lists etc  */
+
+p {}
+
+ul, ol {}
+
+li {}
+
+/*  Links */
+
+a, a:visited {}
+
+a:hover, a:focus {}
+
+/* Form Code */
+form {
+    padding: .5em 0 1em;
+    text-align: center;
+}
+button {
+    display: block;
+    margin: 1em auto;
+}
+/* Reusable Classes */
+
+.text-synopsis {
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* Page Structure */
+.container {
+    margin: auto;
+    max-width: 100%;
+}
+.container-form {
+    margin: 1em auto 4em;
+}
+
+
+/* Media Queries for larger devices */
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 760px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
 }
