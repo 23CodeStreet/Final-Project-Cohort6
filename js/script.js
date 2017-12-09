@@ -60,14 +60,15 @@ for(var i = 0; i < 24; i++) {
 function createResults() {
 
    var container = '<div class="movieContainer">';
-   var image = '<img src="img/placeholder.png" class="poster">';
+   // var image = '<img src="img/placeholder.png" class="poster">';
+   var image = '<img src="http://www.joblo.com/timthumb.php?src=/posters/images/full/moonlight-poster-lg.jpg&h=600&q=100" class="poster">'
    var titleContainer = '<div class="titleContainer">'
    var title = '<h3 class="movieTitle"> movie title</h3>'
    var description = "<p class='movieDesciption'> Fueled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne enlists the help of his newfound ally, Diana Prince, to face an even greater enemy.</p>"
-   var readMoreButton = '<a href="#" class="button">Read more</a>'
+   var readMore = '<a href="#" class=readMoreButton> Read more </a>'
    var closeDiv = '</div>';
 
-   var result = container + image + titleContainer + title + description + readMoreButton + closeDiv + closeDiv;
+   var result = container + image + titleContainer + title + description + readMore + closeDiv + closeDiv;
 
    return result;
 
