@@ -87,12 +87,66 @@ button {
 }
 
 
+/*RESULTS STYLE*/
+
+.resultsHTML {
+
+}
+
+.resultsHTML h2 {
+
+}
+
+
+.movieContainer {
+  float: left;
+  padding: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.titleContainer {
+  background-color: white;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.4s ease;
+
+}
+
+.movieContainer:hover .titleContainer {
+  opacity: 0.8;
+
+}
+
+.movieTitle {
+  font-size: 1.4em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.poster {
+  width: 100%;
+}
+
 /* Media Queries for larger devices */
 
 @media screen and (min-width: 768px) {
     .container {
         max-width: 760px;
-    }
+        padding: 10px;
+
+      }
+
+    .movies {
+          float: left;
+          width: 50%;
+          padding: 5px;
+            }
+
+
 }
 
 @media screen and (min-width: 990px) {

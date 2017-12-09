@@ -50,6 +50,32 @@ function makeSearch(type) {
     });
 }
 
+// RESULTS HTML
+
+for(var i = 0; i < 24; i++) {
+   $('.movieResults').append(createResults());
+   console.log ("loop is working")
+}
+
+function createResults() {
+
+   var container = '<div class="movieContainer">';
+   var image = '<img src="img/placeholder.png" class="poster">';
+   var titleContainer = '<div class="titleContainer">'
+   var title = '<h3 class="movieTitle"> movie title</h3>'
+   var description = "<p class='movieDesciption'> Fueled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne enlists the help of his newfound ally, Diana Prince, to face an even greater enemy.</p>"
+   var readMoreButton = '<a href="#" class="button">Read more</a>'
+   var closeDiv = '</div>';
+
+   var result = container + image + titleContainer + title + description + readMoreButton + closeDiv + closeDiv;
+
+   return result;
+
+   console.log ("return is working")
+}
+
+
+
 // This is just test code for now - we will get this working on Thursday.
 // function getGenres() {
 //
