@@ -103,10 +103,22 @@ function searchByGenre(genre) {
     for (var i = 0; i < data.results.length; i++) {
       console.log(genre);
       console.log(data.results[i].title);
+      console.log(data.results[i].poster_path);
 
-      $('body').append(data.results[i].title);
+
+      //$('body').append(data.results[i].title);
       // $('.resultContainer').append(createHTML(data.results[i]))
-
     }
   })
 }
+
+var md={}
+md.poster_path='https://api.themoviedb.org/img/'+
+//
+// function passToMainPage(md) {
+//   var snippet =
+//   snippet += md.title;
+//   snippet += w.icon;
+//   // $('').append(snippet)
+//
+// }
