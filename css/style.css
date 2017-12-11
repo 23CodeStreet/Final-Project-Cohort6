@@ -50,7 +50,11 @@ h6 {
 
 /*  Paragraphs, Lists etc  */
 
-p {}
+p {
+  font-family: 'PT Sans', 'Ubuntu', sans-serif;
+  line-height: 1.3;
+
+}
 
 ul, ol {}
 
@@ -87,22 +91,166 @@ button {
 }
 
 
+/*RESULTS STYLE*/
+
+.resultsHTML {
+  background-color: #0D183B;
+  overflow: auto;
+}
+
+.resultsHTML header {
+  height: 50px;
+  border-bottom: solid 1px #393971;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 2em;
+  clear: both;
+
+}
+
+.resultsHTML h1 {
+  font-size: 1.2em;
+  color: #FFD65C;
+  margin: 0;
+}
+
+/*BURGER MENU*/
+
+.burgermenu {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  right: 10px;
+  top: 27px;
+}
+
+.burgerpiece {
+    width: 20px;
+    height: 3px;
+    background-color: #FFD65C;
+    margin: 3px 0;
+    border-radius: 1px;
+
+}
+
+/*BURGER MENU*/
+
+.resultsHTML h2 {
+  font-size: 1em;
+  padding-left: 1em;
+  text-align: left;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 1.5em;
+}
+
+hr {
+  position: absolute;
+  width: 2em;
+  top: 95px;
+  left: 1em;
+  margin-bottom: 2em;
+  clear: both;
+  border-color: #D20F8C;
+}
+
+.movieContainer {
+  float: left;
+  padding: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.titleContainer {
+  padding: 5em 1.5em;
+  background-color: #0D1428;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.4s ease;
+  color: white;
+}
+
+.movieContainer:hover .titleContainer {
+  opacity: 0.8;
+
+}
+
+.movieTitle {
+  font-size: 1.3em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.poster {
+  width: 100%;
+}
+
+.movieTitle, .movieDesciption {
+  padding: 10px 0px;
+}
+
+.readMoreButton {
+  height: auto;
+  width: 120px;
+  padding: 8px;
+  border: 2px solid #E7C82E;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #E7C82E;
+  position: absolute;
+  bottom: 1.5em;
+  right: 1em;
+  text-align: center;
+
+}
+
+.readMoreButton:hover {
+  color: white;
+  background-color: #E7C82E;
+  transition: all 0.4s ease;
+
+
+}
+
+
+
 /* Media Queries for larger devices */
 
 @media screen and (min-width: 768px) {
     .container {
         max-width: 760px;
-    }
+        padding: 10px;
+      }
+
+    .movieContainer {
+          width: 50%;
+          padding: 10px;
+          }
+
+
 }
 
 @media screen and (min-width: 990px) {
     .container {
         max-width: 900px;
     }
+
+    .movieContainer {
+          width: 33.3%;
+          padding: 10px;
+          }
 }
 
 @media screen and (min-width: 1200px) {
     .container {
         max-width: 1100px;
     }
+
+    .movieContainer {
+          width: 25%;
+          padding: 10px;
+          }
+
 }

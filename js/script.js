@@ -50,6 +50,46 @@ function makeSearch(type) {
     });
 }
 
+// RESULTS HTML
+
+for(var i = 0; i < 24; i++) {
+   $('.movieResults').append(createResults());
+   console.log ("loop is working")
+}
+
+function createResults() {
+
+   var container = '<div class="movieContainer">';
+   // var image = '<img src="img/placeholder.png" class="poster">';
+   var image = '<img src="http://www.joblo.com/timthumb.php?src=/posters/images/full/moonlight-poster-lg.jpg&h=600&q=100" class="poster">'
+   var titleContainer = '<div class="titleContainer">'
+   var title = '<h3 class="movieTitle"> movie title</h3>'
+   var description = "<p class='movieDesciption'> Fueled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne enlists the help of his newfound ally, Diana Prince, to face an even greater enemy.</p>"
+   var readMore = '<a href="#" class="readMoreButton"> Read more </a>'
+   var closeDiv = '</div>';
+
+   var result = container + image + titleContainer + title + description + readMore + closeDiv + closeDiv;
+
+   return result;
+
+   console.log ("return is working")
+}
+
+
+function getSimilarMovies () {
+      $.get('https://api.themoviedb.org/3/movie/' + '123' + '/similar?&api_key=48ca54ddb0a0259e28dbb2afa690ed61',
+      function(data){
+        console.log(data.results)
+        for(var i = 0; i < data.results.length; i++) {
+           console.log (data.results[i])
+        }
+      })
+}
+
+getSimilarMovies()
+
+
+
 // This is just test code for now - we will get this working on Thursday.
 // function getGenres() {
 //
