@@ -12,6 +12,63 @@
 
   <body>
     <main class=resultsHTML>
+      <div class="container-form">
+  <h2>Search by Genre</h2>
+  <form id="form-genres">
+    <input type="checkbox" class="checkbox-genre" name="genre" value="28">
+    <label class="text-synposis" for="28">Action</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="12">
+    <label class="text-synposis" for="12">Adventure</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="16">
+    <label class="text-synposis" for="16">Animation</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="35">
+    <label class="text-synposis" for="35">Comedy</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="80">
+    <label class="text-synposis" for="80">Crime</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="99">
+    <label class="text-synposis" for="99">Documentary</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="18">
+    <label class="text-synposis" for="18">Drama</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="10751">
+    <label class="text-synposis" for="10751">Family</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="14">
+    <label class="text-synposis" for="14">Fantasy</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="36">
+    <label class="text-synposis" for="36">History</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="27">
+    <label class="text-synposis" for="27">Horror</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="10402">
+    <label class="text-synposis" for="10402">Music</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="9648">
+    <label class="text-synposis" for="9648">Mystery</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="10749">
+    <label class="text-synposis" for="10749">Romance</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="878">
+    <label class="text-synposis" for="878">Science Fiction</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="10770">
+    <label class="text-synposis" for="10770">TV Movie</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="53">
+    <label class="text-synposis" for="53">Thriller</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="10752">
+    <label class="text-synposis" for="10752">War</label>
+    <input type="checkbox" class="checkbox-genre" name="genre" value="37">
+    <label class="text-synposis" for="37">Western</label>
+  </form>
+  <button onclick="getGenres()">Select Genres</button>
+</div>
+
+      <form id="form-search">
+          <fieldset id="select-type">
+              <input type="radio" name="type" value="movie" id="movie" checked>
+              <label for="movie">Movie</label>
+              <input type="radio" name="type" value="person" id="person">
+              <label for="person">Person</label>
+
+          </fieldset>
+
+          <input type="text" name="searchName" id="film-name" />
+      </form>
+      <button onclick="startSearch()">Search</button>
       <header>
         <h1>NameHere</h1>
         <div class=burgermenu>
