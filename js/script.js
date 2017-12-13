@@ -76,6 +76,23 @@ function createResults() {
 }
 
 
+// READ MORE HTML
+
+  function readMoreResults(data) {
+    console.log(data)
+    var container = '<div class="readmorecontainer">';
+    var trailer = '<img src="https://image.tmdb.org/t/p/w500' + data.backdrop_path + '" class="trailer">';
+    var title = '<h3 class="movietitle">' + data.title + '</h3>';
+    var description = '<div class="moviedescription">' + data.overview + '</div>';
+    var review = '<div class="starrating">' + data.vote_average + '</div>';
+    var closeContainer = '</div>';
+
+    var result = container + trailer + title + description + review + closeContainer;
+
+    return result;
+  }
+
+
 
 // This is just test code for now - we will get this working on Thursday.
 // function getGenres() {
