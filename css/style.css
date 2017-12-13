@@ -269,14 +269,6 @@ hr {
 .moviedescription {
   background-color: #0D1428;
   padding: 20px;
-  margin-bottom: 20px;
-  color: white;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.similarmovies {
-  background-color: #0D1428;
-  padding: 20px;
   color: white;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -289,6 +281,8 @@ hr {
 .castandcrew {
 
   background-color: #0D1428;
+  height: 200px;
+  overflow: auto;
   padding: 20px;
   margin-bottom: 20px;
   color: white;
@@ -314,6 +308,14 @@ hr {
   padding-top: 10px;
 }
 
+.similarmovies {
+  background-color: #0D1428;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
 
 
 /* Media Queries for larger devices */
@@ -336,7 +338,30 @@ hr {
       height: 400px;
     }
 
-    .description {
+    .movieDesciption {
+      margin-bottom: 10px;
+    }
+
+    .castandcrew {
+      float: left;
+      width: 45%;
+      margin: 10px
+    }
+
+    .reviews {
+      float: right;
+      clear: none;
+      width: 45%;
+      paddng: 10px;
+      margin: 10px;
+    }
+
+    .similarmovies {
+      clear: both;
+      margin: 40px 20px 20px 20px;
+    }
+
+    /*.description {
       width: 350px;
       float: left;
       margin-left: 10px;
@@ -351,7 +376,7 @@ hr {
       margin-right: 10px;
       margin-left: 10px;
       margin-top: 20px;
-    }
+    }*/
 
 
 }
@@ -373,7 +398,30 @@ hr {
       height: 450px;
     }
 
-    .description {
+    .movieDesciption {
+      margin-bottom: 10px;
+    }
+
+    .castandcrew {
+      float: left;
+      width: 45%;
+      margin: 10px
+    }
+
+    .reviews {
+      float: right;
+      clear: none;
+      width: 45%;
+      paddng: 10px;
+      margin: 10px;
+    }
+
+    .similarmovies {
+      clear: both;
+      margin: 80px 20px 20px 20px;
+    }
+
+    /*.description {
       width: 500px;
       float: left;
       margin-left: 10px;
@@ -387,7 +435,7 @@ hr {
       margin-right: 10px;
       margin-left: 10px;
       margin-top: 20px;
-    }
+    }*/
 
 
 }
@@ -410,7 +458,31 @@ hr {
       height: 500px;
     }
 
-    .description {
+
+    .movieDesciption {
+      margin-bottom: 10px;
+    }
+
+    .castandcrew {
+      float: left;
+      width: 45%;
+      margin: 10px
+    }
+
+    .reviews {
+      float: right;
+      clear: none;
+      width: 45%;
+      paddng: 10px;
+      margin: 10px;
+    }
+
+    .similarmovies {
+      clear: both;
+      margin: 40px 20px 20px 20px;
+    }
+
+    /*.description {
       width: 650px;
       float: left;
       margin-left: 10px;
@@ -425,11 +497,5 @@ hr {
       margin-right: 10px;
       margin-left: 10px;
       margin-bottom: 20px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .info {
-      width: 570px;
-    }
+    }*/
 }

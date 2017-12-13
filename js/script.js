@@ -100,7 +100,6 @@ $.get('https://api.themoviedb.org/3/movie/' + 284053 + '/credits?api_key=48ca54d
 
   for (var j = 0; j < 10; j++) {
     console.log(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
-    console.log(data.)
   }
 })
 
@@ -121,7 +120,7 @@ $.get('https://api.themoviedb.org/3/movie/' + 284053 + '/credits?api_key=48ca54d
     $(".moviedescription").html(data.overview);
     // $(".similarmovies").html(data.similar.results[j].title);
     // $(".castandcrew").html(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
-    $(".starrating").html(data.vote_average + ' ' + 'out of 10');
+    $(".starrating").html('Average' + ' ' + data.vote_average + ' ' + 'out of 10');
     $(".reviewsactual").html(data.reviews.results[0].content + ' ' + 'by' + ' ' + data.reviews.results[0].author);
 
     //console.log(data)
