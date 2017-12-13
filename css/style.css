@@ -217,7 +217,7 @@ hr {
 
 /* READ MORE */
 
-.readmorecontainer {
+.readmore {
   background-color: #0D183B;
   height: 100vh;
   overflow: auto;
@@ -255,9 +255,8 @@ hr {
 }
 
 .readmore h3 {
-  font-size: 1.4em;
+  font-size: 1em;
   color: white;
-  padding-bottom: 10px;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
 }
@@ -268,6 +267,14 @@ hr {
 }
 
 .moviedescription {
+  background-color: #0D1428;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.similarmovies {
   background-color: #0D1428;
   padding: 20px;
   color: white;
@@ -288,12 +295,25 @@ hr {
   font-family: 'Ubuntu', sans-serif;
 }
 
+
 .reviews {
   padding: 20px;
+  height: 200px;
+  overflow: auto;
   background-color: #0D1428;
   color: white;
   font-family: 'Ubuntu', sans-serif;
 }
+
+.starrating {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.reviewsactual {
+  padding-top: 10px;
+}
+
 
 
 /* Media Queries for larger devices */
