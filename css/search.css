@@ -1,0 +1,17 @@
+/*BURGER MENU*/
+
+.burgermenu {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  right: 10px;
+  top: 27px;
+}
+
+.burgerpiece {
+    width: 20px;
+    height: 3px;
+    background-color: #FFD65C;
+    margin: 3px 0;
+    border-radius: 1px;
+
+}
