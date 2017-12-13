@@ -79,7 +79,7 @@ function createResults() {
 // READ MORE HTML
 
   function readMoreResults(data) {
-    console.log(data)
+    //console.log(data)
     var container = '<div class="readmorecontainer">';
     var trailer = '<img src="https://image.tmdb.org/t/p/w500' + data.backdrop_path + '" class="trailer">';
     var title = '<h3 class="movietitle">' + data.title + '</h3>';
@@ -92,7 +92,14 @@ function createResults() {
     return result;
   }
 
+//var id = 284053;
 
+$.get('https://api.themoviedb.org/3/movie/'+ 284053 +'?api_key=48ca54ddb0a0259e28dbb2afa690ed61&append_to_response=videos,images,reviews,similar', function(data){
+  console.log(data);
+  console.log(data.videos.results[0].key);
+  console.log("https://www.youtube.com/watch?v=" + data.videos.results[0].key);
+  $('.readmoreresults').append(readMoreResults(data));
+})
 
 // This is just test code for now - we will get this working on Thursday.
 // function getGenres() {
