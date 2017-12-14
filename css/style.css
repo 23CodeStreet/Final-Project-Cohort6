@@ -214,6 +214,59 @@ hr {
 
 }
 
+.checkbox-genre {
+  	background: #333;
+  	border-radius: 50px;
+
+}
+
+#form-search  {
+  color: white;
+  font-family: 'PT Sans', 'Ubuntu', sans-serif;
+  line-height: 1.3;
+  padding: 2px;
+}
+
+
+.text-synposis {
+  color: white;
+  font-family: 'PT Sans', 'Ubuntu', sans-serif;
+  line-height: 1.3;
+  padding: 2px;
+
+}
+
+
+.selectGenresButton {
+  height: auto;
+  width: 120px;
+  padding: 8px;
+  border: 2px solid #E7C82E;
+  border-radius: 50px;
+  text-decoration: none;
+  background-color: #E7C82E;
+  color: white;
+  text-align: center;
+  font-family: 'PT Sans', 'Ubuntu', sans-serif;
+  font-size: 1em;
+
+}
+
+
+.startSearchButton {
+  height: auto;
+  width: 120px;
+  padding: 8px;
+  border: 2px solid #E7C82E;
+  border-radius: 50px;
+  text-decoration: none;
+  background-color: #E7C82E;
+  color: white;
+  text-align: center;
+  font-family: 'PT Sans', 'Ubuntu', sans-serif;
+  font-size: 1em;
+
+}
 
 /* READ MORE */
 
@@ -320,7 +373,6 @@ hr {
   color: white;
   font-family: 'Ubuntu', sans-serif;
 }
-
 
 
 /* Media Queries for larger devices */
