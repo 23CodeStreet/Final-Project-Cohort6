@@ -2,6 +2,7 @@
 CODE TO GRAB THE VALUE FROM THE RADIO BUTTON -
 - CURRENTLY NOT BEING USED FOR ANYTHING!
 --- */
+/*
 function getRadioValue() {
     var radioValue = $("input[name='type']:checked").val();
     console.log(radioValue);
@@ -76,101 +77,96 @@ function createResults() {
 
    console.log ("return is working")
 }
-
+*/
 
 // READ MORE HTML
 
-$.get('https://api.themoviedb.org/3/movie/'+ 284053 +'?api_key=48ca54ddb0a0259e28dbb2afa690ed61&append_to_response=videos,credits,images,reviews,similar', function(data){
-
-  console.log(data);
-  console.log(data.videos.results[0].key);
-  console.log(data.reviews.results[0].content);
-  console.log("https://www.youtube.com/watch?v=" + data.videos.results[0].key);
-
-  for (var j = 0; j < 10; j++) {
-    console.log(data.similar.results[j].title)
-  }
-
-  $('.readmoreresults').append(readMoreResults(data));
-})
-
-$.get('https://api.themoviedb.org/3/movie/' + 284053 + '/credits?api_key=48ca54ddb0a0259e28dbb2afa690ed61', function(data){
-  console.log(data)
-  // console.log(data.cast[0].character + ' ' + 'played by' + ' ' + data.cast[0].name)
-
-  for (var j = 0; j < 10; j++) {
-    console.log(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
-  }
-})
-
-  function readMoreResults(data) {
-
-    for (var j = 0; j < data.length; j++) {
-      $(".similarmovies").html(data.similar.results[j].title);
-      $(".castandcrew").html(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name);
-    }
-
-    // for (var j = 0; j < data.cast.length; j++) {
-    //   $(".castandcrew").html(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
-    // }
-
-    $(".movietitle").html(data.title);
-    $(".tagline").html('"' + data.tagline + '"');
-    $(".trailer").html('source src="' + "https://www.youtube.com/watch?v=" + data.videos.results[0].key + '"' + ' ' + 'type="video/mp4"')
-    $(".moviedescription").html(data.overview);
-    // $(".similarmovies").html(data.similar.results[j].title);
-    // $(".castandcrew").html(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
-    $(".starrating").html('Average' + ' ' + data.vote_average + ' ' + 'out of 10');
-    $(".reviewsactual").html(data.reviews.results[0].content + ' ' + 'by' + ' ' + data.reviews.results[0].author);
-
-    //console.log(data)
-    // var container = '<div class="readmorecontainer">';
-    // var trailer = '<img src="https://image.tmdb.org/t/p/w500' + data.poster_path + '" class="poster">';
-    // var title = '<h2 class="movietitle">' + data.title + '</h2>';
-    // var description = '<div class="moviedescription">' + data.overview + "out of 10" + '</div>';
-    // var review = '<div class="starrating">' + data.vote_average + '</div>';
-    // var closeContainer = '</div>';
-    //
-    // var result = container + trailer + title + description + review + closeContainer;
-    //
-    // return result;
-  }
-
-//var id = 284053;
 
 
 
 
 
+ // function readMoreResults() {
+ //
+ //   for (var j = 0; j < data.length; j++) {
+ //     $(".similarmovies").html(data.similar.results[j].title);
+ //     $(".castandcrew").html(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name);
+ //   }
+ //
+ //   for (var j = 0; j < data.cast.length; j++) {
+ //     $(".castandcrew").html(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
+ //   }
+ //
+ //   var container = '';
+ //   var trailer = '"https://www.youtube.com/watch?v=" + data.videos.results[0].key +';
+ //   var moviedescription = '<div class="moviedescription">'  + data.overview + '</div>';
+ //   var castandcrew = '<div class="castandcrew">' data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name + '</div>';
+ //   var starrating = '<div class="starrating">' + 'Average' + ' ' + data.vote_average + ' ' + 'out of 10' + '</div>';
+ //   var reviewsactual = '<div class="reviewsactual">' data.reviews.results[0].content + ' ' + 'by' + ' ' + data.reviews.results[0].author + '</div>';
+ //
+ // }
 
-// $.get('https://api.themoviedb.org/3/movie/'+ 284053 +'/credits/?&api_key=48ca54ddb0a0259e28dbb2afa690ed61', function(data) {
-//       console.log(data)
-// })
+ $.get('https://api.themoviedb.org/3/movie/' + 284053 + '?api_key=48ca54ddb0a0259e28dbb2afa690ed61&append_to_response=videos,images,reviews,similar', function(data){
+
+   console.log(data);
+   console.log(data.videos.results[0].key);
+   console.log(data.reviews.results[0].content);
+   console.log("https://www.youtube.com/watch?v=" + data.videos.results[0].key);
+
+   for (var j = 0; j < 10; j++) {
+     console.log(data.similar.results[j].title)
+      $(".similarmovies").append("<li>" + data.similar.results[j].title + "</li>");
+   }
+   //write to the screen:
+   $(".movietitle").html(data.title);
+   $(".tagline").html('"' + data.tagline + '"');
+   $(".trailer").html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + data.videos.results[0].key + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>')
+   $(".moviedescription").html(data.overview);
+   $(".starrating").html('Average' + ' ' + data.vote_average + ' out of 10');
+   $(".reviewsactual").html(data.reviews.results[1].content +  ' by ' + data.reviews.results[1].author);
+
+ })
 
 
+ $.get('https://api.themoviedb.org/3/movie/' + 284053 + '/credits?api_key=48ca54ddb0a0259e28dbb2afa690ed61', function(data){
+   console.log(data)
+   // console.log(data.cast[0].character + ' ' + 'played by' + ' ' + data.cast[0].name)
+
+   for (var j = 0; j < 10; j++) {
+     console.log(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
+     $(".castandcrew").append("<li>" + data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name + "</li>");
+   }
+   console.log(data)
 
 
+ })
 
-// This is just test code for now - we will get this working on Thursday.
-// function getGenres() {
-//
-//     var genreList = [];
-//
-//     // Get response values from only *checked* checkboxes
-//     $.each($("input[name='genre']:checked"), function() {
-//         genreList.push($(this).val());
-//     });
-//
-//     console.log(genreList.join(", "));
-//     searchByGenre(genreList[0]);
-// }
-//
-// function searchByGenre(genre) {
-//     $.get('https://api.themoviedb.org/3/genre/' + genre + '/movies?api_key=48ca54ddb0a0259e28dbb2afa690ed61', function(data) {
-//         // $('.resultContainer').replaceWith('<div class="resultContainer"></div>')
-//         for (var i = 0; i < data.results.length; i++) {
-//             console.log(data.results[i]);
-//             // $('.resultContainer').append(createHTML(data.results[i]))
-//         }
-//     })
-// }
+  //
+  // function readMoreResults(data) {
+  //
+  //   console.log(data.similar.results[0].title)
+  //   console.log('Average' + ' ' + data.vote_average + ' ' + 'out of 10')
+  //   console.log(data.reviews.results[0].content + ' ' + 'by' + ' ' + data.reviews.results[0].author)
+  //
+  //   // for (var j = 0; j < 10; j++) {
+  //   //   $(".similarmovies").append(data.similar.results[j].title);
+  //   //   $(".castandcrew").append(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name);
+  //   //   //
+  //   //   // console.log(data.similar.results[j].title)
+  //   //   // console.log(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
+  //   // }
+  //
+  //   // for (var j = 0; j < data.cast.length; j++) {
+  //   //   $(".castandcrew").html(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
+  //   // }
+  //
+  //   $(".movietitle").html(data.title);
+  //   $(".tagline").html('"' + data.tagline + '"');
+  //   $(".trailer").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + '"' + data.videos.results.key + '"' + 'frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>')
+  //   $(".moviedescription").html(data.overview);
+  //   $(".similarmovies").html(data.similar.results[j].title);
+  //   $(".castandcrew").html(data.cast[j].character + ' ' + 'played by' + ' ' + data.cast[j].name)
+  //   $(".starrating").html('Average' + ' ' + data.vote_average + ' ' + 'out of 10');
+  //   $(".reviewsactual").html(data.reviews.results[0].content + ' ' + 'by' + ' ' + data.reviews.results[0].author);
+  //
+  // }

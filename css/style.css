@@ -236,7 +236,7 @@ hr {
   padding: 0px 20px 0px 20px;
   width: 100%;
   height: 306px;
-  border: 1px solid white;
+
 }
 
 .readmore h1 {
@@ -299,6 +299,7 @@ hr {
   font-family: 'Ubuntu', sans-serif;
 }
 
+
 .starrating {
   text-align: center;
   padding-top: 5px;
@@ -306,6 +307,10 @@ hr {
 
 .reviewsactual {
   padding-top: 10px;
+}
+
+.similar {
+  clear: both;
 }
 
 .similarmovies {
