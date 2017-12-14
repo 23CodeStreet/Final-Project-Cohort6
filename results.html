@@ -12,6 +12,14 @@
 
   <body>
     <main class=resultsHTML>
+      <header>
+        <h1>Movie in a haystack</h1>
+        <div class=burgermenu>
+          <div class=burgerpiece></div>
+          <div class=burgerpiece></div>
+          <div class=burgerpiece></div>
+        </div>
+      </header>
       <div class="container-form">
   <h2>Search by Genre</h2>
   <form id="form-genres">
@@ -54,7 +62,7 @@
     <input type="checkbox" class="checkbox-genre" name="genre" value="37">
     <label class="text-synposis" for="37">Western</label>
   </form>
-  <button onclick="getGenres()">Select Genres</button>
+  <button onclick="getGenres()" class=selectGenresButton >Select Genres</button>
 </div>
 
       <form id="form-search">
@@ -68,15 +76,9 @@
 
           <input type="text" name="searchName" id="film-name" />
       </form>
-      <button onclick="startSearch()">Search</button>
-      <header>
-        <h1>NameHere</h1>
-        <div class=burgermenu>
-          <div class=burgerpiece></div>
-          <div class=burgerpiece></div>
-          <div class=burgerpiece></div>
-        </div>
-      </header>
+
+      <button onclick="startSearch()" class=startSearchButton >Search</button>
+
         <h2>Our recommendations</h2>
         <hr/>
         <div class="movieResults"></div>
